@@ -38,7 +38,7 @@ from mplsoccer import VerticalPitch
 
 # Layout setup
 st.set_page_config(page_title='World Cup U17', layout='centered', page_icon='🌍')
-
+st.markdown("<h1 font-size:50px;'>🏆 World Cup U17 Player Analytics</h1>", unsafe_allow_html=True)
 # Tabs
 tab1, tab2, tab3 = st.tabs(["Player Total Stats", "Player p90 Stats","Player Maps"])
 
@@ -1112,4 +1112,5 @@ with tab3:
 - **GK Distribution**: Successful goalkeeper passes.
 - **GK Launches**: Long balls launched forward.
 - **Other Goals**: Goals not scored with foot or head.""")          
+
         
