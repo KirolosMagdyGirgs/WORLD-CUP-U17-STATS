@@ -1,0 +1,7 @@
+mplsoccer
+numpy
+pandas
+openpyxl
+highlight_text
+streamlit
+
