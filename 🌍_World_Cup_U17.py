@@ -51,7 +51,7 @@ with tab1:
     # =========================================
     if "df_stats" not in st.session_state:
         st.session_state["df_stats"] = pd.read_excel(
-            "Player Season Stats - World Cup U17.xlsx"
+            "Player Season Stats - World Cup U17.csv"
         )
 
     df = st.session_state["df_stats"]
@@ -233,7 +233,7 @@ with tab2:
     # Load data once
     if "df_p90" not in st.session_state:
         st.session_state["df_p90"] = pd.read_excel(
-            "Player Season Stats - World Cup U17.xlsx"
+            "Player Season Stats - World Cup U17.csv"
         )
 
     df = st.session_state["df_p90"]
@@ -388,8 +388,8 @@ with tab3:
 
     @st.cache_data
     def load_data_maps():
-        file_path = "World Cup U17.xlsx"
-        df = pd.read_excel(file_path, engine='openpyxl')
+        file_path = "World Cup U17.csv"
+        df = pd.read_csv(file_path) # Changed from read_excel to read_csv
 
         df['endX'] = pd.to_numeric(df['endX'], errors='coerce')
         df['endY'] = pd.to_numeric(df['endY'], errors='coerce')
