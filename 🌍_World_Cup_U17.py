@@ -390,7 +390,7 @@ with tab3:
     def load_data_maps():
         file_path = "World Cup U17.csv"
         df = pd.read_csv(file_path) # Changed from read_excel to read_csv
-
+        
         df['endX'] = pd.to_numeric(df['endX'], errors='coerce')
         df['endY'] = pd.to_numeric(df['endY'], errors='coerce')
         df['goalMouthZ'] = pd.to_numeric(df['goalMouthZ'], errors='coerce')
