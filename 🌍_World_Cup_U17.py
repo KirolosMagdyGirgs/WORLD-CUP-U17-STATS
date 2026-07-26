@@ -389,7 +389,7 @@ with tab3:
     @st.cache_data
     def load_data_maps():
         file_path = "World Cup U17.xlsx"
-        df = pd.read_excel(file_path)
+        df = pd.read_excel(file_path, engine='openpyxl')
 
         df['endX'] = pd.to_numeric(df['endX'], errors='coerce')
         df['endY'] = pd.to_numeric(df['endY'], errors='coerce')
