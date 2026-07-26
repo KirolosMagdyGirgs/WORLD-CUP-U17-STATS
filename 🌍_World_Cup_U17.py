@@ -50,7 +50,7 @@ with tab1:
     # LOAD DATA ONCE (no league dropdown)
     # =========================================
     if "df_stats" not in st.session_state:
-        st.session_state["df_stats"] = pd.read_excel(
+        st.session_state["df_stats"] = pd.read_csv(
             "Player Season Stats - World Cup U17.csv"
         )
 
@@ -232,7 +232,7 @@ with tab2:
 
     # Load data once
     if "df_p90" not in st.session_state:
-        st.session_state["df_p90"] = pd.read_excel(
+        st.session_state["df_p90"] = pd.read_csv(
             "Player Season Stats - World Cup U17.csv"
         )
 
