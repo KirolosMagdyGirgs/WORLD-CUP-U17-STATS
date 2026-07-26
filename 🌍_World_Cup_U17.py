@@ -51,7 +51,8 @@ with tab1:
     # =========================================
     if "df_stats" not in st.session_state:
         st.session_state["df_stats"] = pd.read_csv(
-            "Player Season Stats - World Cup U17.csv"
+            "Player Season Stats - World Cup U17.csv",
+            encoding="latin-1"
         )
 
     df = st.session_state["df_stats"]
@@ -233,7 +234,8 @@ with tab2:
     # Load data once
     if "df_p90" not in st.session_state:
         st.session_state["df_p90"] = pd.read_csv(
-            "Player Season Stats - World Cup U17.csv"
+            "Player Season Stats - World Cup U17.csv",
+            encoding="latin-1"
         )
 
     df = st.session_state["df_p90"]
