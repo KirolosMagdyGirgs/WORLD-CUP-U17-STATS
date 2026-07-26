@@ -388,8 +388,10 @@ with tab3:
 
     @st.cache_data
     def load_data_maps():
-        file_path = "World Cup U17.csv"
-        df = pd.read_csv(file_path) # Changed from read_excel to read_csv
+        file_path = "World Cup U17.csv.gz"
+        df = pd.read_csv(file_path, compression="gzip") 
+    
+    # ... the rest of your code stays exactly the same
         
         df['endX'] = pd.to_numeric(df['endX'], errors='coerce')
         df['endY'] = pd.to_numeric(df['endY'], errors='coerce')
